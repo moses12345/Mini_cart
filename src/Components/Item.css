@@ -1,0 +1,97 @@
+.item {
+  height: 50px;
+  width: 100%;
+  border-bottom: solid #E2E1E5;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  position: relative;
+}
+.planetlogo {
+  height: 50px;
+  width: 50px;
+  margin-right: 1%;
+}
+.title-desc {
+  display: flex;
+  flex-direction: column;
+}
+.title-desc > p {
+  margin: 0;
+  font-size: 10px;
+}
+.inc-dec {
+  position: absolute;
+  right: 8%;
+  display: flex;
+  gap: 2em;
+}
+.quantity {
+  padding: 0 20px 0 20px;
+  border: 1px solid black;
+  font-size: 15px;
+  position: relative;
+}
+.quantity > p {
+  position: absolute;
+  bottom: -15px;
+}
+.currency {
+  position: absolute;
+  right: 1%;
+}
+
+.minus {
+  background-color: rgb(102, 101, 101);
+  height: 3px;
+  width: 20px;
+  position: relative;
+  top: 10px;
+}
+.horizontal {
+  background-color: rgb(102, 101, 101);
+  height: 20px;
+  width: 3px;
+  border-radius: 10px;
+}
+.vertical {
+  background-color: rgb(102, 101, 101);
+  height: 3px;
+  width: 20px;
+  position: relative;
+  border-radius: 10px;
+  top: -12px;
+  right: 9px;
+}
+@media only screen and (max-width:800px) {
+  .title-desc > p {
+  display: none;
+}
+.title-desc:hover p{
+  background-color: #b2d4dc;
+  display: block;
+  height: 100%;
+  width: 80%;
+  z-index: 1;
+  position: absolute;
+  top:0;
+  animation: increaseonhover 250ms ease-in;
+  text-align: center;
+}
+.inc-dec {
+  gap: 1em;
+  right: 15%;
+}
+}
+@keyframes increaseonhover {
+  0%{
+    width: 0;
+    color:transparent ;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 80%;
+  }
+}
