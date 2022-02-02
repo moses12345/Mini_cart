@@ -19,6 +19,16 @@ const App = () => {
     const { data } = await axios.get(
       "https://dnc0cmt2n557n.cloudfront.net/products.json"
     );
+    // const mock = {
+    //   id: "123499",
+    //   title: "Product 2",
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    //   image: "/product2.jpeg",
+    //   price: "39",
+    //   currency: "$",
+    // };
+
+    // data.products.push(mock)
 
     if (localStorage.getItem("total") === null) {
       data.products.map((data) => {

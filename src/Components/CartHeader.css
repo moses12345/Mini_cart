@@ -29,16 +29,16 @@
 }
 .Items-in-cart {
   background-color: #b2d4dc;
-  height: 100px;
   width: 100%;
   position: absolute;
   z-index: 1;
-  padding: 1em;
+  padding: 1em 1em 0.3em 1em;
 }
 .product-with-quantity {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   margin-bottom: 10px;
+  border-bottom : 3px solid #A8C9D2 ;
 }
 .triangle {
   position: relative;
