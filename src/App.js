@@ -33,6 +33,7 @@ const App = () => {
     if (localStorage.getItem("total") === null) {
       data.products.map((data) => {
         data["quantity"] = 1;
+        return data
       });
       const getInitaltotal = data.products.reduce(
         (prev, curr) => curr.quantity * Number(curr.price) + prev,
@@ -42,6 +43,7 @@ const App = () => {
     } else {
       data.products.map((data) => {
         data["quantity"] = Number(localStorage.getItem(data.id));
+        return data
       });
     }
     setitems(data.products);
